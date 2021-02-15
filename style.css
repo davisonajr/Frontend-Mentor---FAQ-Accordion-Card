@@ -1,0 +1,226 @@
+@font-face {
+    font-family: Kumbh Regular;
+    src: url(fonts/KumbhSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: Kumbh Bold;
+    src: url(fonts/KumbhSans-Bold.ttf);
+    transform: scale(1, 1.2)
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+#workspace {
+    width: 1440px;
+    height: 768px;
+    background: linear-gradient(hsl(273, 75%, 66%),hsl(240, 73%, 65%));
+}
+
+#card {
+    position:relative;
+    left:281px;
+    top: 129px;
+    width: 920px;
+    height: 509px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 40px 60px -60px black;
+    background-image: url(images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 950px 950px;
+    background-position: -560px -290px;
+    overflow: hidden;   
+}
+
+#desk {
+    position:relative;
+    left: -80px;
+    top: 75px;
+    width: 470px;
+    height: 360px;
+}
+
+#box {
+    position: absolute;
+    left: 188px;
+    top: 342px;
+}
+
+#FAQ {
+    width: 360px;
+    height: auto;
+    position:absolute;
+    left:477px;
+    top: 71px;
+}
+
+#FAQ h1 {
+    margin:0px;
+    padding:3px 0px 24px 0px;
+    font-family:  Kumbh Bold,  Courier, monospace;
+    color: hsl(238, 29%, 16%);
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.faq-inactive,.faq-active {
+    padding: 18px 0px 18px 0px;
+    border-bottom: .5px solid rgba(128, 128, 128,.2);
+}
+
+.faq-inactive h2, .faq-active h2 {
+    margin:0px;
+    padding:0px;
+    font-family:  Kumbh Regular,  Courier, monospace;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.faq-inactive h2:hover, .faq-active h2:hover {
+    color: hsl(14, 88%, 65%);
+    transition: color .3s;
+    cursor: pointer;
+}
+
+.faq-inactive img ,.faq-active img {
+    float:right;
+    margin-right: 20px;
+    margin-top:2px;
+    transition: transform .3s;
+}
+
+.faq-inactive p, .faq-active p {
+    margin:10px 32px 0px 0px;
+    padding:0px;
+    font-family:  Kumbh Regular,  Courier, monospace;
+    color: hsl(240, 6%, 50%);
+    font-size: 12px;
+    line-height: 1.5em;
+}
+
+.faq-inactive h2 {
+    color: hsl(240, 6%, 50%);
+    
+}
+
+.faq-inactive img {
+    transform: rotate(0deg);
+}
+
+.faq-inactive p {
+    display: none;
+}
+
+.faq-active h2 {
+    color: hsl(238, 29%, 16%);
+    font-weight: 700;
+}
+
+.faq-active img {
+    transform: rotate(180deg);
+}
+
+.faq-active p {
+    display: block;
+}
+
+.attribution { 
+    position: relative;
+    font-size: 12px; 
+    text-align: center; 
+    margin-left: auto;
+    margin-top: 16%;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (max-width:600px) {
+    #workspace {
+        width: 375px;
+        height: 768px;
+        background: linear-gradient(hsl(273, 75%, 66%),hsl(240, 73%, 65%));
+    }
+    
+    #card {
+        position:relative;
+        left:24px;
+        top: 148px;
+        width: 327px;
+        height: 535px;
+        background-color: white;
+        border-radius: 20px;
+        box-shadow: 0px 40px 60px -60px black;
+        background-image: url(images/bg-pattern-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: 238px 240px;
+        background-position: 50px -135px;
+        overflow: visible;
+    }
+    
+    #desk {
+        position:absolute;
+        left: 50px;
+        top: -108px;
+        width: 238px;
+        height: 182px;
+    }
+    
+    #box {
+        position: absolute;
+        left: 75px;
+        top: 110px;
+    }
+    
+    #box img {
+        width:90px;
+        height:auto;
+    }
+
+    #FAQ {
+        width: 280px;
+        height: auto;
+        position:relative;
+        left:30px;
+        top: 135px;
+    }
+
+    #FAQ h1 {
+        margin:0px;
+        padding:5px 0px 14px 0px;
+        font-family:  Kumbh Bold,  Courier, monospace;
+        color: hsl(238, 29%, 16%);
+        font-size: 30px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+    
+    .faq-inactive h2, .faq-active h2 {
+        margin:0px;
+        padding:0px;
+        font-family:  Kumbh Regular,  Courier, monospace;
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 0px;
+    }
+
+    .attribution { 
+        position: relative;
+        font-size: 12px; 
+        text-align: center; 
+        margin-left: auto;
+        margin-top: 58%;
+    }
+    
+    .attribution a { 
+        color: hsl(228, 45%, 44%); 
+    }
+}

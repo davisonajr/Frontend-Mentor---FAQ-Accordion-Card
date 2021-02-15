@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | FAQ Accordion Card</title>
+  <!-- The script below create an array of objects with questions and answers. It make the code ready to receive the database from back-end -->
+  <script>
+    let database = [{question: "How many team members can I invite?",answer:"You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan."},
+    {question: "What is the maximum file upload size?",answer:"No more than 2GB. All files in your account must fit your allotted storage space."},
+    {question:"How do I reset my password?",answer:"Click “Forgot password” from the login page or “Change password” from your profile page. A reset link will be emailed to you."},
+    {question:"Can I cancel my subscription?",answer:"Yes! Send us a message and we’ll process your request no questions asked."},
+    {question: "Do you provide additional support?",answer:"Chat and email support is available 24/7. Phone lines are open during normal business hours."}];
+   </script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="workspace">
+    <div id="card">
+      <img src="./images/illustration-woman-online-desktop.svg" alt="woman in front of a monitor"  id="desk">
+      <div id="FAQ">
+        <h1>FAQ</h1>
+      </div>
+    </div>
+    <div id="box"><img src="images/illustration-box-desktop.svg" alt="box with at"></div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Davison Almeida Jr.</a>.
+    </div>
+  </div>
+  <script>
+    for (let i = 0; i < 5; i++) {
+    let div = document.createElement("div");
+    let h2 = document.createElement('h2');
+    let p = document.createElement('p');
+    let button = document.createElement('img');
+    let question = document.createTextNode(database[i].question);
+    let answer = document.createTextNode(database[i].answer);
+    let container = document.getElementById('FAQ');
+
+    button.src = 'images/icon-arrow-down.svg';
+    h2.appendChild(question);
+    h2.appendChild(button);
+    p.appendChild(answer);
+    div.id = i;
+    div.className = 'faq-inactive';
+    div.onclick = function() {control(this.id)};
+    div.appendChild(h2);
+    div.appendChild(p);
+    container.appendChild(div);
+    }
+    function control(id){
+    if (document.getElementById(id).className == 'faq-inactive'){
+      if (document.getElementsByClassName('faq-active').length != 0) {
+      for (let elems of document.getElementsByClassName('faq-active')) {
+        elems.className = 'faq-inactive';
+      }
+    }
+      document.getElementById(id).className = 'faq-active';
+    }
+    else {
+      document.getElementById(id).className = 'faq-inactive';
+    }
+  }
+  </script>
+</body>
+</html>
